@@ -10,6 +10,11 @@ fn main() -> std::io::Result<()> {
     // Path to the file to decompress and decode
     let file_path: Vec<_> = env::args().collect();
 
+    if file_path.len() <= 1 ||  file_path.len() > 3 {
+        println!("decoder <encoded_file> <desired_file>");
+        return Ok(());
+    }
+
     // Open the file
     let file = File::open(file_path[1].clone())?;
     let out_file = File::create(file_path[2].clone());
