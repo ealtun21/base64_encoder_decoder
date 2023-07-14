@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "encoder_sender"
+name = "encoder_decoder_sender"
 version = "0.1.0"
 dependencies = [
  "base64",
